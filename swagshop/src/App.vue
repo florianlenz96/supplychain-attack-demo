@@ -1,10 +1,4 @@
 <script setup lang="ts">
-// ⚠️  PHASE 2 – COMPROMISED VERSION
-// The only change from the clean App.vue is this single import.
-// @conf-demo/image-optimizer looks like a harmless image utility,
-// but it runs a side-effect that mutates config.paypalAddress.
-import '@conf-demo/image-optimizer'
-
 import NavBar from './components/NavBar.vue'
 import ProductCard from './components/ProductCard.vue'
 import { products } from './data/products'
@@ -41,10 +35,6 @@ import { config } from './config'
       <section id="products" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold text-gray-900">Our Collection</h2>
-          <p class="mt-2 text-gray-500">
-            Payments go to
-            <code class="bg-gray-100 px-2 py-0.5 rounded text-sm font-mono text-brand-700">{{ config.paypalAddress }}</code>
-          </p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

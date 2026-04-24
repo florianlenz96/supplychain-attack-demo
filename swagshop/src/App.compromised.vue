@@ -41,10 +41,6 @@ import { config } from './config'
       <section id="products" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold text-gray-900">Our Collection</h2>
-          <p class="mt-2 text-gray-500">
-            Payments go to
-            <code class="bg-gray-100 px-2 py-0.5 rounded text-sm font-mono text-brand-700">{{ config.paypalAddress }}</code>
-          </p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -80,7 +76,6 @@ import { config } from './config'
     <footer class="bg-gray-900 text-gray-400 py-8">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm">
         <span>© 2025 {{ config.shopName }}. Built with Vue 3 + Vite.</span>
-        <span>Payments to <code class="text-brand-300 font-mono">{{ config.paypalAddress }}</code></span>
       </div>
     </footer>
   </div>

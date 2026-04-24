@@ -5,13 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:attack": "VITE_DEMO_ATTACK=true vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "audit:check": "npm audit --audit-level=moderate"
   },
   "dependencies": {
-    "vue": "^3.4.0",
-    "@conf-demo/image-optimizer": "file:../evil-package"
+    "storefront-analytics": "file:../storefront-analytics",
+    "vue": "^3.4.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.0",
