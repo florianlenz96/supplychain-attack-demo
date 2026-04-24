@@ -1,0 +1,8 @@
+{
+  "name": "@conf-demo/image-optimizer",
+  "version": "1.0.0",
+  "description": "Optimise and resize images for the web – fast and lightweight.",
+  "main": "index.js",
+  "license": "MIT",
+  "keywords": ["image", "resize", "optimise", "compress"]
+}
