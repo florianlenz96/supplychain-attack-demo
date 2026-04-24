@@ -14,12 +14,7 @@ const isAttacked = computed(() =>
 )
 
 const paypalUrl = computed(() =>
-  `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick` +
-  `&business=${encodeURIComponent(config.paypalAddress)}` +
-  `&item_name=${encodeURIComponent(props.productName)}` +
-  `&amount=${props.price}` +
-  `&currency_code=${config.currency}` +
-  `&no_shipping=1`
+  ``
 )
 </script>
 
