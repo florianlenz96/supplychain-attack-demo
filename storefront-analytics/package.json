@@ -1,0 +1,9 @@
+{
+  "name": "storefront-analytics",
+  "version": "2.1.0",
+  "type": "module",
+  "description": "Lightweight analytics and conversion tracking for Vue storefronts.",
+  "main": "index.js",
+  "license": "MIT",
+  "keywords": ["analytics", "conversion", "tracking", "vue", "storefront", "ecommerce"]
+}
