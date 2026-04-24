@@ -1,10 +1,4 @@
 <script setup lang="ts">
-// ⚠️  PHASE 2 – COMPROMISED VERSION
-// The only change from the clean App.vue is this single import.
-// @conf-demo/image-optimizer looks like a harmless image utility,
-// but it runs a side-effect that mutates config.paypalAddress.
-import '@conf-demo/image-optimizer'
-
 import NavBar from './components/NavBar.vue'
 import ProductCard from './components/ProductCard.vue'
 import { products } from './data/products'

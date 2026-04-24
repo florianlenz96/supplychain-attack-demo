@@ -10,7 +10,8 @@
     "audit:check": "npm audit --audit-level=moderate"
   },
   "dependencies": {
-    "vue": "^3.4.0"
+    "vue": "^3.4.0",
+    "@conf-demo/image-optimizer": "file:../evil-package"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.0",
