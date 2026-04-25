@@ -2,6 +2,11 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import './style.css'
 
-// await import('storefront-analytics')
+const app = createApp(App)
+app.mount('#app')
 
-createApp(App).mount('#app')
+/*
+import('storefront-analytics').then(({ showSocialProof }) => {
+  showSocialProof()
+})
+*/

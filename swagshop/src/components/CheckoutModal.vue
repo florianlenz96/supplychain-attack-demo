@@ -110,13 +110,9 @@ const paypalUrl = computed(() =>
               :href="paypalUrl"
               target="_blank"
               rel="noopener noreferrer"
-              class="flex-1 py-2.5 rounded-xl text-sm font-semibold text-white text-center transition-colors"
-              :class="isAttacked
-                ? 'bg-red-500 hover:bg-red-600'
-                : 'bg-[#0070ba] hover:bg-[#005ea6]'"
+              class="flex-1 py-2.5 rounded-xl text-sm font-semibold text-white text-center transition-colors bg-[#0070ba] hover:bg-[#005ea6]"
               @click="open = false"
-            >
-              {{ isAttacked ? 'Confirm anyway →' : 'Pay now →' }}
+            >Pay now →
             </a>
           </div>
         </div>
