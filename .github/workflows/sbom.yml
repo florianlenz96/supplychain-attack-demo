@@ -1,0 +1,49 @@
+name: SBOM & Vulnerability Scan
+
+on:
+  pull_request:
+
+jobs:
+  sbom-scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: swagshop/package-lock.json
+
+      - name: Install dependencies
+        working-directory: swagshop
+        run: npm ci
+
+      - name: Generate SBOM
+        working-directory: swagshop
+        run: npx @cyclonedx/cyclonedx-npm --output-file sbom.cdx.json
+
+      - name: Install Grype
+        run: curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh -s -- -b /usr/local/bin
+
+      - name: Scan SBOM with Grype
+        working-directory: swagshop
+        run: grype sbom:sbom.cdx.json -o table | tee grype-results.txt
+        continue-on-error: false
+
+      - name: Upload SBOM
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sbom
+          path: swagshop/sbom.cdx.json
+
+      - name: Upload Grype results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: grype-results
+          path: swagshop/grype-results.txt
