@@ -15,6 +15,8 @@ defineProps<{ product: Product }>()
       </span>
     </div>
 
+    Test
+    
     <!-- Content -->
     <div class="p-5 flex flex-col gap-3 flex-1">
       <div>
